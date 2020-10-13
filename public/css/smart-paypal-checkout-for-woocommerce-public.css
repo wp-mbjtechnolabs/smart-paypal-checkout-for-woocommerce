@@ -1,0 +1,79 @@
+.psb-button-container {
+    text-align: center;
+}
+.psb-proceed-to-checkout-button-separator {
+    display:inline-block;
+    opacity: .8;
+    margin: 0 0 1em;
+    text-align: center;
+}
+.psb-order-review .woocommerce-checkout #payment ul.payment_methods {
+    display: none;
+}
+.psb_shipping_details, .psb_billing_details {
+    margin-bottom: 10px;
+    clear: both;
+}
+.psb_edit_billing_address {
+    cursor: pointer;
+}
+.psb_edit_billing_address:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+.psb_edit_shipping_address {
+    cursor: pointer;
+}
+.psb_edit_shipping_address:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+.psb-order-review #ship-to-different-address {
+    display: none;
+}
+.psb-order-review .woocommerce-billing-fields, .psb-order-review .woocommerce-shipping-fields {
+    display: none;
+}
+.order_review_page_description {
+    margin-bottom: 20px;
+    clear:both;
+}
+.button.alt.psb_cancel {
+    clear: both;
+    margin-bottom: 20px;
+}
+.woocommerce-checkout #payment div.payment_box .wc-credit-card-form div.hosted-field-braintree, .woocommerce #payment div.payment_box .wc-credit-card-form div.hosted-field-braintree {
+    height:2em;padding:7px;border:1px solid #ccc;border-radius:3px;transition:border-color .16s;-webkit-transition:border-color .16s;background-color:#fff;
+    border-color: #c7c1c6;
+    border-top-color: rgb(199, 193, 198);
+    border-top-color: #bbb3b9;
+}
+.payments-sdk-contingency-handler {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999999 !important
+}
+.payments-sdk-contingency-handler iframe {
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff !important;
+    padding: 1em;
+    box-sizing: content-box;
+    border-radius: 5px;
+}
+
+.woocommerce-checkout #payment div.payment_box #wc-paypal_smart_checkout-cc-form.wc-credit-card-form div.form-row,  .woocommerce #payment div.payment_box #wc-paypal_smart_checkout-cc-form.wc-credit-card-form div.form-row{
+    padding: 3px;
+}
+.psb-proceed-to-checkout-button-separator.checkout_cc_separator {
+    margin: 20px 0px 0px 0px;
+}
