@@ -1,11 +1,10 @@
 === Smart PayPal Checkout For WooCommerce ===
 Contributors: mbjtech
-Tags: woocommerce, paypal, paypal checkout
-Donate link: paypal@mbjtechnolabs.com
+Tags: woocommerce, paypal, paypal checkout, PayPal Smart Button
 Requires at least: 5.3
 Tested up to: 5.5.1
 Requires PHP: 7.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -22,10 +21,10 @@ Easily add PayPal payment options to your WordPress / WooCommerce website.
  * Advanced credit and debit card payments ( with 3D Secure for If you are based in Europe, you are subjected to PSD2. PayPal recommends this option )
  
 = Quality Control =
-Payment processing can\'t go wrong.  It\'s as simple as that.  Our certified PayPal engineers have developed and thoroughly tested this plugin on the PayPal sandbox (test) servers to ensure your customers don\'t have problems paying you.  
+Payment processing can't go wrong.  It's as simple as that.  Our certified PayPal engineers have developed and thoroughly tested this plugin on the PayPal sandbox (test) servers to ensure your customers don't have problems paying you.  
 
 = Seamless PayPal Integration =
-Stop bouncing back and forth between WooCommerce and PayPal to manage and reconcile orders.  We\'ve made sure to include all WooCommerce order data in PayPal transactions so that everything matches in both places.  If you\'re looking at a PayPal transaction details page it will have all of the same data as a WooCommerce order page, and vice-versa.  
+Stop bouncing back and forth between WooCommerce and PayPal to manage and reconcile orders.  We've made sure to include all WooCommerce order data in PayPal transactions so that everything matches in both places.  If you're looking at a PayPal transaction details page it will have all of the same data as a WooCommerce order page, and vice-versa.  
 
 = Get Involved =
 Developers can contribute to the source code on the [Smart PayPal Checkout For WooCommerce GitHub repository](https://github.com/wp-mbjtechnolabs/smart-paypal-checkout-for-woocommerce).
@@ -34,7 +33,7 @@ Developers can contribute to the source code on the [Smart PayPal Checkout For W
 == Installation ==
 = Automatic installation =
 
-Automatic installation is the easiest option as WordPress handles the file transfers itself and you don\'t need to leave your web browser. To do an automatic install of Smart PayPal Checkout For WooCommerce, log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.
+Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't need to leave your web browser. To do an automatic install of Smart PayPal Checkout For WooCommerce, log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.
 
 = Manual Installation =
 
@@ -64,9 +63,11 @@ How to Receive local payments with Smart PayPal Checkout For WooCommerce For Pay
 3. Cart Page
 
 == Changelog ==
+= 1.0.1 =
+* Verification - WooCommerce 4.6.0 compatibility.
 = 1.0.0 =
  * PayPal Checkout (Smart Payment Buttons)
  * Advanced credit and debit card payments ( with 3D Secure for If you are based in Europe, you are subjected to PSD2. PayPal recommends this option )
 
 == Upgrade Notice ==
-After updating, make sure to clear any caching / CDN plugins you may be using.  Also, go into the plugin\'s gateway settings, review everything, and click Save even if you do not make any changes.
+After updating, make sure to clear any caching / CDN plugins you may be using.  Also, go into the plugin's gateway settings, review everything, and click Save even if you do not make any changes.

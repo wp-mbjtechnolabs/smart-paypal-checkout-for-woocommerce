@@ -5,14 +5,14 @@
  * Plugin Name:       Smart PayPal Checkout For WooCommerce
  * Plugin URI:        https://github.com/wp-mbjtechnolabs/smart-paypal-checkout-for-woocommerce
  * Description:       PayPal Checkout with Smart Payment Buttons gives your buyers a simplified and secure checkout experience.
- * Version:           1.0.0
- * Author:            paypal@mbjtechnlabs.com
+ * Version:           1.0.1
+ * Author:            mbjtech
  * Author URI:        https://github.com/wp-mbjtechnolabs/smart-paypal-checkout-for-woocommerce
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License:           GPLv3
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       smart-paypal-checkout-for-woocommerce
  * Domain Path:       /languages
- * WC tested up to: 4.5.2
+ * WC tested up to: 4.6.0
  * WC requires at least: 2.6
  */
 // If this file is called directly, abort.
