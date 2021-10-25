@@ -1,0 +1,24 @@
+h3.wc-settings-sub-title.psb_separator_heading {
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+    color: #23282d;
+    font-size: 1.3em;
+    margin: 32px 0px 5px 0px;
+    padding-bottom: 10px;
+}
+.psb_paypal_checkout_gateway_manual_credential_input {
+    outline: none;
+    text-decoration: none;
+}
+
+.psb_paypal_checkout_gateway_setting_sepraer {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.list {
+    list-style-type: circle;
+    margin-left: 42px;
+}

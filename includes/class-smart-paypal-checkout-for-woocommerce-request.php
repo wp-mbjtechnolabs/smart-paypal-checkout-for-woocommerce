@@ -1348,7 +1348,7 @@ class Paypal_Checkout_For_Woocommerce_Request extends WC_Payment_Gateway {
                 $this->psb_get_access_token();
             }
             if ($this->is_valid_for_use() === true && $this->access_token) {
-                $posted_raw = $this->psb_get_raw_data();
+                $posted_raw = psb_get_raw_data();
                 if (empty($posted_raw)) {
                     return false;
                 }
@@ -1367,20 +1367,7 @@ class Paypal_Checkout_For_Woocommerce_Request extends WC_Payment_Gateway {
         }
     }
 
-    public function psb_get_raw_data() {
-        try {
-            if (function_exists('phpversion') && version_compare(phpversion(), '5.6', '>=')) {
-                return file_get_contents('php://input');
-            }
-            global $HTTP_RAW_POST_DATA;
-            if (!isset($HTTP_RAW_POST_DATA)) {
-                $HTTP_RAW_POST_DATA = file_get_contents('php://input');
-            }
-            return $HTTP_RAW_POST_DATA;
-        } catch (Exception $ex) {
-            
-        }
-    }
+    
 
     public function getallheaders_value() {
         try {

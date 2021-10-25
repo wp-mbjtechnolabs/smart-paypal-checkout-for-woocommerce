@@ -33,7 +33,7 @@ class Paypal_Checkout_For_Woocommerce_Button_Manager {
     }
 
     public function get_properties() {
-        $this->title = $this->psb_get_settings('title', 'PayPal');
+        $this->title = __('PayPal Checkout', 'smart-paypal-checkout-for-woocommerce');
         $this->enabled = 'yes' === $this->psb_get_settings('enabled', 'no');
         $this->testmode = 'yes' === $this->psb_get_settings('testmode', 'no');
         if ($this->testmode) {
@@ -57,7 +57,7 @@ class Paypal_Checkout_For_Woocommerce_Button_Manager {
         $this->style_label = $this->psb_get_settings('style_label', 'paypal');
         $this->order_review_page_title = $this->psb_get_settings('order_review_page_title', 'Confirm your PayPal order');
         $this->order_review_page_enable_coupons = 'yes' === $this->psb_get_settings('order_review_page_enable_coupons', 'yes');
-        $this->order_review_page_description = $this->psb_get_settings('order_review_page_description', false);
+        $this->order_review_page_description = $this->psb_get_settings('order_review_page_description', __("<strong>You're almost done!</strong><br>Review your information before you place your order.", 'smart-paypal-checkout-for-woocommerce'));
         $this->paymentaction = $this->psb_get_settings('paymentaction', 'capture');
         if ($this->paymentaction === 'authorize' && get_woocommerce_currency() === 'INR') {
             $this->paymentaction = 'capture';
@@ -70,6 +70,12 @@ class Paypal_Checkout_For_Woocommerce_Button_Manager {
             $this->threed_secure_enabled = 'yes' === $this->psb_get_settings('threed_secure_enabled', 'no');
         } else {
             $this->threed_secure_enabled = false;
+        }
+        
+        $this->enabled_pay_later_messaging = 'yes' === $this->psb_get_settings('enabled_pay_later_messaging', 'no');
+        $this->pay_later_messaging_page_type = $this->psb_get_settings('pay_later_messaging_page_type', array('home', 'category', 'product', 'cart', 'payment'));
+        if (empty($this->pay_later_messaging_page_type)) {
+            $this->enabled_pay_later_messaging = false;
         }
         $this->AVSCodes = array("A" => "Address Matches Only (No ZIP)",
             "B" => "Address Matches Only (No ZIP)",
@@ -98,6 +104,7 @@ class Paypal_Checkout_For_Woocommerce_Button_Manager {
             "U" => "Service Unavailable - N/A",
             "X" => "No Response - N/A"
         );
+        
     }
 
     public function psb_add_hooks() {
@@ -155,8 +162,15 @@ class Paypal_Checkout_For_Woocommerce_Button_Manager {
         $smart_js_arg['commit'] = ( $page === 'checkout' ) ? 'true' : 'false';
         $smart_js_arg['intent'] = ( $this->paymentaction === 'capture' ) ? 'capture' : 'authorize';
         $smart_js_arg['locale'] = get_button_locale_code();
+        $components = array("buttons");
         if (is_checkout() && $this->advanced_card_payments) {
-            $smart_js_arg['components'] = "hosted-fields,buttons";
+            array_push($components, "hosted-fields");
+        }
+        if ($this->enabled_pay_later_messaging) {
+            array_push($components, 'messages');
+        }
+        if (!empty($components)) {
+            $smart_js_arg['components'] = implode(',', $components);
         }
         $js_url = add_query_arg($smart_js_arg, 'https://www.paypal.com/sdk/js');
         wp_register_script('psb-checkout-js', $js_url, array(), null, false);

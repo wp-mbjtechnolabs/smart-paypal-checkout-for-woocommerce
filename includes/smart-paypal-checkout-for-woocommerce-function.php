@@ -120,6 +120,7 @@ function psb_get_wpml_locale() {
 }
 
 function psb_is_local_server() {
+    return false;
     if (!isset($_SERVER['HTTP_HOST'])) {
         return;
     }
@@ -207,4 +208,37 @@ if (!function_exists('psb_is_advanced_cards_available')) {
         }
     }
 
+    if (!function_exists('psb_get_raw_data')) {
+
+        function psb_get_raw_data() {
+            try {
+                if (function_exists('phpversion') && version_compare(phpversion(), '5.6', '>=')) {
+                    return file_get_contents('php://input');
+                }
+                global $HTTP_RAW_POST_DATA;
+                if (!isset($HTTP_RAW_POST_DATA)) {
+                    $HTTP_RAW_POST_DATA = file_get_contents('php://input');
+                }
+                return $HTTP_RAW_POST_DATA;
+            } catch (Exception $ex) {
+                
+            }
+        }
+
+    }
+    
+    if (!function_exists('psb_key_generator')) {
+
+        function psb_key_generator() {
+            $key = md5(microtime());
+            $new_key = '';
+            for ($i = 1; $i <= 19; $i++) {
+                $new_key .= $key[$i];
+                if ($i % 5 == 0 && $i != 19)
+                    $new_key .= '';
+            }
+            return strtoupper($new_key);
+        }
+
+    }
 }

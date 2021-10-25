@@ -1,14 +1,14 @@
 === Smart PayPal Checkout For WooCommerce ===
 Contributors: mbjtech
-Tags: woocommerce, paypal, paypal checkout, PayPal Smart Button
+Tags: paypal, paypal checkout, ecommerce, credit card, payment gateway, payment
 Requires at least: 5.3
-Tested up to: 5.5.1
+Tested up to: 5.8.1
 Requires PHP: 7.0
-Stable tag: 1.0.1
+Stable tag: 2.0.2
 License: License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-PayPal Checkout with Smart Payment Buttons gives your buyers a simplified and secure checkout experience
+PayPal Checkout with Smart Payment Buttons gives your buyers a simplified and secure checkout experience. Develop by Official PayPal Partner.
 
 == Description ==
 PayPal Checkout with Smart Payment Buttons gives your buyers a simplified and secure checkout experience. PayPal intelligently presents the most relevant payment types to your shoppers, automatically, making it easier for them to complete their purchase using methods like Pay with Venmo, PayPal Credit, credit card payments, iDEAL, Bancontact, Sofort, and other payment types.
@@ -19,6 +19,25 @@ Easily add PayPal payment options to your WordPress / WooCommerce website.
 
  * PayPal Checkout (Smart Payment Buttons)
  * Advanced credit and debit card payments ( with 3D Secure for If you are based in Europe, you are subjected to PSD2. PayPal recommends this option )
+
+List of Methods.
+
+ * PayPal
+ * Pay in 4
+ * Venmo
+ * American Express
+ * Bancontact
+ * BLIK
+ * Discover
+ * eps
+ * giropay
+ * iDEAL
+ * MyBank
+ * Mastercard
+ * Przelewy24
+ * Sofort
+ * Visa
+ 
  
 = Quality Control =
 Payment processing can't go wrong.  It's as simple as that.  Our certified PayPal engineers have developed and thoroughly tested this plugin on the PayPal sandbox (test) servers to ensure your customers don't have problems paying you.  
@@ -63,8 +82,16 @@ How to Receive local payments with Smart PayPal Checkout For WooCommerce For Pay
 3. Cart Page
 
 == Changelog ==
+
+= 1.0.3 =
+* Verification - WordPress 5.5.3 compatibility.
+
+= 1.0.2 =
+* Verification - WooCommerce 4.6.1 compatibility.
+
 = 1.0.1 =
 * Verification - WooCommerce 4.6.0 compatibility.
+
 = 1.0.0 =
  * PayPal Checkout (Smart Payment Buttons)
  * Advanced credit and debit card payments ( with 3D Secure for If you are based in Europe, you are subjected to PSD2. PayPal recommends this option )

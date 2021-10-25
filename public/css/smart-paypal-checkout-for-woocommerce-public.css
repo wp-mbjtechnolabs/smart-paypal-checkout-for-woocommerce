@@ -77,3 +77,12 @@
 .psb-proceed-to-checkout-button-separator.checkout_cc_separator {
     margin: 20px 0px 0px 0px;
 }
+.psb_message_home, .psb_message_product, .psb_message_cart, .psb_message_payment, .psb_message_category {
+    display: block;
+    margin: 15px 0px 15px 0px;
+    position: relative;
+    z-index: 99999;
+}
+.payment_box.payment_method_paypal_smart_checkout > p {
+    margin-bottom: 20px;
+}
