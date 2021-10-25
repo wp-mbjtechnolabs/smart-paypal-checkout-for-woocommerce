@@ -120,14 +120,7 @@ Automatic updates should work great for you.  As always, though, we recommend ba
 * Click Sandbox Accounts in the left sidebar menu.
 * Click the Create Account button to create a new sandbox account.
 
-#### How to Receive local payments with Smart PayPal Checkout For WooCommerce For PayPal indian merchants?
-
-* You can now start receiving Domestic Payments in INR with your existing PayPal integration by completing 3 steps as mentioned below. Please note that your existing Cross Border Payments remain unaffected by performing the below steps–
-
-1. Complete Domestic KYC :  As per Indian Regulations, you need to complete Domestic KYC to start receiving domestic payments in INR. You can complete Domestic KYC by clicking <a href="https://www.paypal.com/policy/hub/kyc">here</a> and uploading required documents in your PayPal account.  To know more about KYC requirements and the type of documents to be uploaded, please click <a href="https://www.paypal.com/in/webapps/mpp/know-your-customer">here</a>. 
-1. Changes to your existing WooCommerce Shopping Cart : If you already have another WooCommerce store to accept domestic payments (INR), steps : Sign in to your admin Panel ->  Go to Settings under WooCommerce -> Choose your base location and set currency as “Indian Rupee”
-1. PayPal currently supports INR (Indian Rupee) as transaction currency ONLY for checkout performed by consumers in India (Indian PayPal Accounts). A consumer with PayPal account issued outside of India will be unable to transact in INR via PayPal. Merchants/ Partners are advised that they present product prices to Indian consumers in INR and to consumers outside India in currencies like USD, EUR, GBP, AUD, etc. This is critical to provide optimum user experience to consumer flows and reduce declines on this account. 
-    
+   
  
 ### Upgrade Notice 
 
